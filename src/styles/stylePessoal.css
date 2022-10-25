@@ -2,10 +2,10 @@
 
 @font-face {
   font-family: "Rubik";
-  src: url("../components/fonts/static/Rubik-Regular.ttf"),
-    url("../components/fonts/static/Rubik-Medium.ttf"),
-    url("../components/fonts/Rubik-Italic-VariableFont_wght.ttf"),
-    url("../components/fonts/Rubik-VariableFont_wght.ttf");
+  src: url("../webfonts/static/Rubik-Regular.ttf"),
+    url("../webfonts/static/Rubik-Medium.ttf"),
+    url("../webfonts/Rubik-Italic-VariableFont_wght.ttf"),
+    url("../webfonts/Rubik-VariableFont_wght.ttf");
   font-weight: normal;
   font-style: none;
 }
