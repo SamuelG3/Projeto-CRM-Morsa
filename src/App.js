@@ -12,13 +12,12 @@ import Recovery from "./components/pages/Recovery";
 import Pipes from "./components/pages/Pipes";
 import Members from "./components/pages/Members";
 
-import "./styles/personalize.css";
-import "./styles/sb-admin-2.css";
-import "./styles/sb-admin-2.min.css";
-import "./styles/stylePessoal.css";
+import Test from "./components/pages/Test";
 
-import "../js/sb-admin-2";
-import "../js/demo/chart-area-demo";
+import "./styles/personalize.css";
+/* import "./styles/sb-admin-2.css";
+import "./styles/sb-admin-2.min.css"; */
+import "./styles/stylePessoal.css";
 
 function App() {
   return (
@@ -34,6 +33,7 @@ function App() {
         <Route path="/user/edit" element={<UserEdit />} />
         <Route path="/notifications" element={<Notifications />} />
         <Route path="pipes/:id" element={<Pipes />} />
+        <Route path="/test" element={<Test />}></Route>
       </Routes>
     </BrowserRouter>
   );
