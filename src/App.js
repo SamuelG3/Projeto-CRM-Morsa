@@ -29,7 +29,7 @@ function App() {
         <Route path="/accounts/recovery" element={<Recovery />} />
 
         <Route path="/organization/:id" element={<OrganizationHome />} />
-        <Route path="/organization/:id/members" element={<Members />} />
+        <Route path="/organization/id/members" element={<Members />} />
         <Route path="/user/edit" element={<UserEdit />} />
         <Route path="/notifications" element={<Notifications />} />
         <Route path="pipes/:id" element={<Pipes />} />

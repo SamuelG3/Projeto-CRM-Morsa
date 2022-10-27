@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react"
 
-export default function Card() {
+export default function Card(props) {
   return (
     <div className="itemCard">
     <div id="favoritarCard">
         <i className="bi bi-star"></i>
     </div>
 <div className="icon-circle bg-warning">
-<i className="bi bi-umbrella"></i>
+<svg src={props.pipe.icon}></svg>
 </div>
-<p id="cardTitle">Vacinas Umbrella</p>
-<p id="numeroDeCardsNoPipe">310 cards</p>
+<p id="cardTitle">{props.pipe.title}</p>
+<p id="numeroDeCardsNoPipe">{props.pipe.cards.length}</p>
 <div id="opcoesDoCard">
 <i className="bi bi-three-dots-vertical"></i>
 </div>

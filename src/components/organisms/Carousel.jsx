@@ -11,8 +11,7 @@ export default function Carousel() {
       </div>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <div className="carousel-img" style="
-          background-image: url(./components/imagens/quem-utiliza/pexels-fauxels-3184611.jpg); background-position: 0 10%;">
+          <div className="carousel-img" src={""}>
           </div>
           <div className="container carousel-container">
             <div className="carousel-caption">
@@ -22,8 +21,7 @@ export default function Carousel() {
           </div>
         </div>
         <div className="carousel-item">
-          <div className="carousel-img" style="
-          background-image: url(./components/imagens/quem-utiliza/pexels-emmy-e-238.jpg); background-position: 0 25%;">
+          <div className="carousel-img" src={""}>
           </div>
           <div className="container carousel-container">
             <div className="carousel-caption">
@@ -33,8 +31,7 @@ export default function Carousel() {
           </div>
         </div>
         <div className="carousel-item">
-          <div className="carousel-img" style="
-          background-image: url(./components/imagens/quem-utiliza/pexels-andrea-piacquadio-3760263.jpg);">
+          <div className="carousel-img" src={""}>
           </div>
           <div className="container carousel-container">
             <div className="carousel-caption">
@@ -44,9 +41,7 @@ export default function Carousel() {
           </div>
         </div>
         <div className="carousel-item">
-          <div className="carousel-img" style="
-          background-image: url(./components/imagens/quem-utiliza/pexels-mentatdgt-1266193.jpg); 
-         background-position: center;">
+          <div className="carousel-img" src={""}>
           </div>
           <div className="container carousel-container">
             <div className="carousel-caption">

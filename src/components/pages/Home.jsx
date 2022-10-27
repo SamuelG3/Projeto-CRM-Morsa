@@ -1,5 +1,7 @@
 import React from "react"
 
+import LandingImage from "../../images/Design stats-amico.svg"
+
 import HomeHeader from "../organisms/HomeHeader";
 import HomeFooter from "../organisms/HomeFooter";
 import Carousel from "../organisms/Carousel";
@@ -13,7 +15,7 @@ export default function Home() {
           <div className="container col-xxl-8 px-4">
             <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
               <div className="col-10 col-sm-8 col-lg-6">
-                <img src="components/imagens/Design stats-amico.svg" className="d-block mx-lg-auto img-fluid img-float" alt="Ilustração isométrica de uma moça utilizando um tablet para ver uma Dashboard" width="700" height="500" loading="lazy" />
+                <img src={LandingImage} className="d-block mx-lg-auto img-fluid img-float" alt="Ilustração isométrica de uma moça utilizando um tablet para ver uma Dashboard" width="700" height="500" loading="lazy" />
               </div>
               <div className="col-lg-6">
                 <h2 className="display-5 fw-bold lh-1 mb-3">Automatize processos em minutos.</h2>
@@ -27,13 +29,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-    
-    
+  
 
     
-
-    
-    <div className="container">
+   {/*  <div className="container">
       <h2 className="text-center">Como usar o Morsa em 3 passos</h2>
     
         <div className="row featurette py-5">
@@ -70,7 +69,7 @@ export default function Home() {
     
           </div>
         </div>
-      </div>
+      </div> */}
    
     <div className="bg-gray py-1">
     <div className="container my-5">
