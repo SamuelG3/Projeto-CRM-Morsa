@@ -1,19 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import UserProfile from "../../images/undraw_profile.png"
-
-
-import AppHeader from "../organisms/AppHeader";
+import Default from "../templates/Default";
 
 
 export default function UserEdit() {
   return (
             
-        <div id="content-wrapper" className="d-flex flex-column">
-
-            <div id="content">
-                <AppHeader />
-            </div>
+    <Default>
            
                 <div className="container">
         <div className="mt-5">
@@ -21,7 +15,7 @@ export default function UserEdit() {
          <p className="mt-0">Edite as informações do seu perfil e suas preferências. <Link to="/">Saiba mais.</Link></p>
         
         <form className="mt-5">
-            <div className="d-flex mr-5">
+            <div className="d-flex mr-3">
                 <div className="d-flex flex-column" >
                 <img className="" witdh="90" height="90" src={UserProfile} alt="Small" />
                 <a title="Remover" tabindex="0" className="pp-display-block" rel="nofollow" data-method="put" href="/users/remove_avatar">Remover</a>
@@ -60,8 +54,7 @@ export default function UserEdit() {
 
        
                 </div>
-                </div>
-                
+</ Default>                
 
     )
 }

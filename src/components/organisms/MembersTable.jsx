@@ -13,8 +13,8 @@ export default function MembersTable() {
                     </tr>
                 </thead>
                
-                <tbody>
-                    <UserList />
+                <tbody>{/* 
+                    <UserList /> */}
                 </tbody>
             </table>
                  <button type="button" className="btn button-type-1 button-type-1-style py-1 px-3 mb-5 small">Load More</button>

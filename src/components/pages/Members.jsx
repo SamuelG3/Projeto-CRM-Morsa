@@ -1,15 +1,12 @@
 import React from "react"
-import AppHeader from "../organisms/AppHeader"
 import MembersTable from "../organisms/MembersTable"
+import Default from "../templates/Default"
 
 export default function Members() {
   return (
 
-    
-        <div id="content-wrapper" className="d-flex flex-column">
-            <div id="content">
-
-                <AppHeader />
+    <Default>
+        
 
 
                 <div className="container">
@@ -22,8 +19,7 @@ export default function Members() {
 
         <MembersTable />
                 </div>
-            </div>
-        </div>
+        </ Default>
 
    
 

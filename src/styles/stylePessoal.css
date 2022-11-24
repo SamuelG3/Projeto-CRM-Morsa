@@ -40,7 +40,7 @@ a:visited {
   color: var(--main-color);
 }
 
-.carousel-item {
+.carouselItem {
   height: 27rem;
   background: #000;
   color: #fff;
@@ -49,19 +49,12 @@ a:visited {
   background-size: cover;
 }
 
-.carousel-container {
-display: flex;
-justify-content: space-between;
-align-content: center;
-}
-
-.carousel-img {
+.carouselImg {
   top: 0;
   left: 0;
   position: absolute;
   right: 0;
   bottom: 0;
-  background-size: cover;
   opacity: 0.5;
 }
 /*------------------- Backgrounds ----------------------------*/
@@ -217,47 +210,3 @@ footer a{
 footer a:hover {
   color: #fff !important;
 }
-
-/* footer {
-  background: #000;
-  padding: 15px;
-  height: auto;
-  color: #fff;
-}
-
-footer .content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  align-content: center;
-  padding-top: 20px;
-  bottom: 15px;
-}
-
-footer .social-icons {
-  align-content: flex-end;
-}
-
-footer li {
-  display: inline-block;
-  margin-right: 20px;
-  margin-left: 0;
-}
-
-footer .fa-brands {
-  transform: scale(2.5);
-  margin-right: 30px;
-  margin-left: 10px;
-}
-
-footer a {
-  color: rgb(255, 255, 255);
-}
-
-footer a li:hover {
-  text-decoration: underline;
-  color: rgb(220, 216, 216);
-}
- */

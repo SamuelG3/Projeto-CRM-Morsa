@@ -1,10 +1,111 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
+import "../../styles/header.css"
+
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+
+import userProfile from "../../images/undraw_profile.png"
+
+
+const UserMenu = (
+    <div id="userMenu" class="navComp">
+    <span>Ada Wong </span>
+    <img
+      src={userProfile}
+      alt="UserName"
+      roundedCircle
+      className="m-2"
+      style={{ width: '40px'}}
+    />
+    </div>
+  )
 
 export default function AppHeader(props) {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
   return (
-<div className="content-wrapper"> 
-<div className="container">
+    
+
+    <Navbar className="Navbar" bg="light" expand="lg">
+      <Container fluid bg="light">
+        <Navbar.Brand className="brand-title" href="/organization/:id">Morsa</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+        <Navbar.Collapse id="basic-navbar-nav" >
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px' }}
+            navbarScroll
+          >
+          </Nav>
+          <div id="navIcons">
+          <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Pipes, Databases..."
+              className="me-3"
+              aria-label="Search"
+            />
+          </Form>
+
+          <Nav.Link href="/organization/:id/members"><div className="d-flex align-items-center navComp"><i className="bi bi-people"></i> <span className="m-2">Pessoas (160)</span></div></Nav.Link>
+          <Nav.Link href="/notifications"><i className="bi bi-bell-fill"></i></Nav.Link>
+        
+        <Nav.Link href="#action2"><i className="bi bi-question-circle"></i></Nav.Link>
+        <div className="topbar-divider"></div>
+            <NavDropdown title={UserMenu}
+            align="end"
+            >
+              <NavDropdown.Item className="dropdownItem" href="/user/:id/edit"><i className="bi bi-person-fill"></i><span> Perfil</span></NavDropdown.Item>
+              <NavDropdown.Item className="dropdownItem" href="/">
+              <i className="bi bi-gear"></i>
+            <span>Preferências</span>
+              </NavDropdown.Item>
+              <NavDropdown.Item className="dropdownItem" href="/">
+              <i className="bi bi-menu-button-wide-fill"></i>
+                <span>Trocar de empresa</span></NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item className="dropdownItem" onClick={handleShow}>
+              <i className="bi bi-door-open-fill"></i>
+            <span>Sair</span>
+              </NavDropdown.Item>
+            </NavDropdown>
+            </div>
+        </Navbar.Collapse>
+      </Container>
+
+
+     <Modal show={show} onHide={handleClose}>
+     <Modal.Header closeButton>
+  <Modal.Title>Log out?</Modal.Title>
+</Modal.Header>
+<Modal.Body>Você tem certeza que está pronto para sair?</Modal.Body>
+<Modal.Footer>
+  <Button variant="secondary" onClick={handleClose}>
+  Cancelar
+  </Button>
+  <Button variant="primary" onClick={handleClose}>
+  Sair
+  </Button>
+</Modal.Footer>
+      </Modal>
+    </Navbar>
+  
+
+  )
+}
+
+{/* <div className="content-wrapper"> 
     <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top border-bottom d-flex align-items-center justify-content-between">
 
                     <Link to="/" className="text-dark text-decoration-none mt-2">
@@ -86,7 +187,4 @@ export default function AppHeader(props) {
                     </ul>
                 </div>
                 </nav>
-                </div>
-                </div>
-  )
-}
+</div> */}

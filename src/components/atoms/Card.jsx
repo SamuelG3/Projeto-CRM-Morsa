@@ -1,8 +1,20 @@
 import React from "react"
 
-export default function Card(props) {
+export default function Card() {
   return (
-    <div className="itemCard">
+    <div class="itemCard">
+                <div id="favoritarCard">
+                    <i class="bi bi-star"></i>
+                </div>
+                <i class="bi bi-airplane-engines-fill"></i>
+            <p id="cardTitle">Projeto Uroboros</p>
+            <p id="numeroDeCardsNoPipe">15 cards</p>
+            <div id="opcoesDoCard">
+            <i class="bi bi-three-dots-vertical"></i>
+            </div>
+            </div>
+
+    /* <div className="itemCard">
     <div id="favoritarCard">
         <i className="bi bi-star"></i>
     </div>
@@ -14,6 +26,6 @@ export default function Card(props) {
 <div id="opcoesDoCard">
 <i className="bi bi-three-dots-vertical"></i>
 </div>
-</div>
+</div> */
   )
 }

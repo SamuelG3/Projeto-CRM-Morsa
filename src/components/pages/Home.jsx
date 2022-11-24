@@ -1,16 +1,17 @@
 import React from "react"
-
+import Visitor from "../templates/Visitor";
 import LandingImage from "../../images/Design stats-amico.svg"
-
-import HomeHeader from "../organisms/HomeHeader";
-import HomeFooter from "../organisms/HomeFooter";
-import Carousel from "../organisms/Carousel";
+import Parceiros from "../organisms/Parceiros";
+import Empresa1 from "../../images/fake-logos/logotype/black/fox-hub-2.png"
+import Empresa2 from "../../images/fake-logos/logotype/black/atica.png"
+import Empresa3 from "../../images/fake-logos/logotype/black/earth-2.png"
+import Empresa4 from "../../images/fake-logos/logotype/black/muzica-2.png"
 
 export default function Home() {
   return (
     
-<div>
-       <HomeHeader />
+    <Visitor>
+
 
           <div className="container col-xxl-8 px-4">
             <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
@@ -30,9 +31,40 @@ export default function Home() {
             </div>
           </div>
   
+<article class="parcerias-article mb-8 py-8">
+      <div>
+      <p>Recomendado por:</p>
+      <ul class="pb-5">
+        <li>
+          <img
+            src={Empresa1}
+            alt="Logo falso de uma empresa 1"
+          />
+        </li>
+        <li>
+          <img
+            src={Empresa2}
+            alt="Logo falso de uma empresa 2"
+            />
+        </li>
+        <li>
+          <img
+            src={Empresa3}
+            alt="Logo falso de uma empresa 3"
+            />
+        </li>
+        <li>
+          <img
+            src={Empresa4}
+            alt="Logo falso de uma empresa 4"
+            />
+        </li>
+    </ul>
+    </div>
+    </article>
 
     
-   {/*  <div className="container">
+  <div className="container">
       <h2 className="text-center">Como usar o Morsa em 3 passos</h2>
     
         <div className="row featurette py-5">
@@ -69,14 +101,14 @@ export default function Home() {
     
           </div>
         </div>
-      </div> */}
+      </div>
    
     <div className="bg-gray py-1">
     <div className="container my-5">
     <div>
     <h3 className="text-center py-3">O que nossos clientes falam sobre nós:</h3>
     
-    <Carousel />
+    <Parceiros />
     </div>
     </div>
     </div>
@@ -97,8 +129,9 @@ export default function Home() {
     </div>
    
     
-    <HomeFooter />
+
     
-    </div>
+    </ Visitor>
+
   )
 }

@@ -1,32 +1,33 @@
 import React from 'react'
-import AppHeader from '../organisms/AppHeader'
+import Default from '../templates/Default'
 import AddCard from '../atoms/AddCard'
-import Greeting from '../organisms/Greeting'
 import Card from '../atoms/Card'
 
-export default function OrganizationHome() {
+import ChartPie from "../../images/svg-icons/chart-diagram-pie-svgrepo-com.svg"
+import ChartGrowth from "../../images/svg-icons/chart-growth-invest-svgrepo-com.svg"
+import CommLetter from "../../images/svg-icons/communication-letter-memo-svgrepo-com.svg"
+
+import UserProfile from "../../images/undraw_profile.png"
+
+export default function OrganizationHome(props) {
   return (
-           <div id="content-wrapper" className="d-flex flex-column">
-
-            <div id="content">
-
-               
-                <AppHeader />
-                
+    <Default>
+          
                 <div className="container">
                 
                 <div className="d-flex flex-column flex-lg-row justify-content-between mt-5 align-items-center ">
                    
 
-                    <Greeting />
-                 
+              <div className="d-flex align-items-center">
+                        <img widht="60" height="60" className="rounded-circle mr-3"
+                                    src={UserProfile} alt=" "/>
+                 <h5 className="text-gray-800 text-wrap"><span className="font-weight-bold">Ada Wong</span>, olha só esses novos processos &#128588;</h5>
+            </div> 
 
-                    
-                    
                     <div id="cards" className="d-flex my-3 mx-5">
-                    <a className="d-flex align-items-center px-3 py-2 mr-2 border rounded" href="#">
+                    <a className="d-flex align-items-center px-3 py-2 mr-2 border rounded" href="/">
                         <div className="mr-2">
-                            <img width="30" height="30" src="./img/svg-icons/chart-diagram-pie-svgrepo-com.svg" />
+                            <img width="30" height="30" src={ChartPie} alt=""/>
                         </div>
                         <div className="text-nowrap">
                             <p className="small font-weight-bold mb-0">Meu trabalho</p>
@@ -34,9 +35,9 @@ export default function OrganizationHome() {
                         </div>
                     </a>
                     
-                    <a className="d-flex align-items-center px-3 py-2 mr-2 border rounded" href="#">
+                    <a className="d-flex align-items-center px-3 py-2 mr-2 border rounded" href="/">
                         <div className="mr-2">
-                            <img width="30" height="30" src="./img/svg-icons/chart-growth-invest-svgrepo-com.svg" />
+                            <img width="30" height="30" src={ChartGrowth} alt=" "/>
                         </div>
                         <div className="text-nowrap">
                             <p className="small font-weight-bold mb-0">Templates</p>
@@ -44,9 +45,9 @@ export default function OrganizationHome() {
                         </div>
                     </a>
                  
-                     <a className="d-flex align-items-center px-3 py-2 border rounded" href="#">
+                     <a className="d-flex align-items-center px-3 py-2 border rounded" href="/">
                         <div className="mr-2">
-                            <img width="30" height="30" src="./img/svg-icons/communication-letter-memo-svgrepo-com.svg" />
+                            <img width="30" height="30" src={CommLetter} alt=" "/>
                         </div>
                         <div className="text-nowrap">
                             <p className="small font-weight-bold mb-0">Ajuda</p>
@@ -55,7 +56,6 @@ export default function OrganizationHome() {
                     </a>
            
                     </div>
-                    
                 
                 </div>
 
@@ -66,11 +66,11 @@ export default function OrganizationHome() {
             </div>
 
             <div id="Pipes" className="mt-4 d-flex">
-                <AddCard />
+                 <AddCard />
                  
-                <Card />
+                 <Card />
 
-                <Card />
+                <Card /> 
 
             </div>
             
@@ -87,12 +87,11 @@ export default function OrganizationHome() {
                 </div>
 
 
-            </div>
+            
 
 
 
-        </div>
-
+</ Default>
 
     
     
